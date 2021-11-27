@@ -1,5 +1,9 @@
 <script>
   const appName = 'linklocality';
   const params = new URLSearchParams(document.location.search);
+  const redirectURL = appName + '://' + params.get('redirect');
+  
   console.log(appName + '://' + params.get('redirect'));
+  
+  location.redirect(redirectURL);
 </script>
